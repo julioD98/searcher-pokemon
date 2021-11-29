@@ -1,0 +1,67 @@
+import React from "react";
+import styled from "styled-components";
+import "@fontsource/lato";
+
+const StyledCard = styled.div`
+  width: 299px;
+  border: 1px solid #dcdde1;
+  border-radius: 3px;
+  background: #353b48;
+`;
+
+const StyledImg = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+`;
+
+const StyledTitle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #dcdde1;
+  border-bottom: 1px solid #dcdde1;
+`;
+
+const StyledWrapStatsList = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const StyledStats = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  font-family: "Lato";
+`;
+
+export const Card = ({ pokemon }) => {
+  return (
+    <StyledCard>
+      <StyledImg>
+        <img src={pokemon.img} alt={pokemon.name} />
+      </StyledImg>
+      <StyledTitle>
+        <h3>{pokemon.name.toUpperCase()}</h3>
+      </StyledTitle>
+      <StyledWrapStatsList>
+        <div>
+          <StyledStats>heal points: {pokemon.stats.hp}</StyledStats>
+          <StyledStats>attack: {pokemon.stats.atk}</StyledStats>
+          <StyledStats>defense: {pokemon.stats.def}</StyledStats>
+        </div>
+        <div>
+          <StyledStats>special attack: {pokemon.stats.spe_atk}</StyledStats>
+          <StyledStats>special defense: {pokemon.stats.spe_def}</StyledStats>
+          <StyledStats>speed: {pokemon.stats.speed}</StyledStats>
+        </div>
+      </StyledWrapStatsList>
+    </StyledCard>
+  );
+};
