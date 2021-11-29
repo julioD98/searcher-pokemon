@@ -52,14 +52,14 @@ export const Card = ({ pokemon }) => {
       </StyledTitle>
       <StyledWrapStatsList>
         <div>
-          <StyledStats>heal points: {pokemon.stats.hp}</StyledStats>
-          <StyledStats>attack: {pokemon.stats.atk}</StyledStats>
-          <StyledStats>defense: {pokemon.stats.def}</StyledStats>
+          <StyledStats>Salud: {pokemon.stats.hp}</StyledStats>
+          <StyledStats>Ataque: {pokemon.stats.atk}</StyledStats>
+          <StyledStats>Defensa: {pokemon.stats.def}</StyledStats>
         </div>
         <div>
-          <StyledStats>special attack: {pokemon.stats.spe_atk}</StyledStats>
-          <StyledStats>special defense: {pokemon.stats.spe_def}</StyledStats>
-          <StyledStats>speed: {pokemon.stats.speed}</StyledStats>
+          <StyledStats>Ataque especial: {pokemon.stats.spe_atk}</StyledStats>
+          <StyledStats>Defensa especial: {pokemon.stats.spe_def}</StyledStats>
+          <StyledStats>Velocidad: {pokemon.stats.speed}</StyledStats>
         </div>
       </StyledWrapStatsList>
     </StyledCard>

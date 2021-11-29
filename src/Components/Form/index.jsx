@@ -11,6 +11,7 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 `;
 
 export const Form = () => {
@@ -20,13 +21,13 @@ export const Form = () => {
       search: "",
     },
     onSubmit: ({ search }) => {
-      history.push(`results/${search}`);
+      history.push(`results/${search.toLowerCase()}`);
     },
   });
 
   return (
     <StyledForm onSubmit={formik.handleSubmit}>
-      <label>buscar</label>
+      <h1>Escribe el nombre de un pokemon</h1>
       <Input
         id="search"
         name="search"

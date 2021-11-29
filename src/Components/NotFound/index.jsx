@@ -7,9 +7,9 @@ import { WrapContent } from "./../WrapContent";
 export const NotFound = ({ children }) => {
   return (
     <WrapContent>
-      {children ? children : "error 404"}
+      {children ? children : "Aqui no hay nada, te perdiste?"}
       <Link to="/home">
-        <Button>regresar</Button>
+        <Button>Regresar</Button>
       </Link>
     </WrapContent>
   );
